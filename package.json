@@ -1,0 +1,30 @@
+{
+  "name": "addr-search",
+  "version": "0.1.0",
+  "description": "The API back end for addresses search",
+  "author": "Constantine",
+  "main": "graphql.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/graphql.ts",
+    "prebuild": "rm -rf dist",
+    "build": "esbuild ./src/graphql.ts --bundle --minify --sourcemap --platform=node --target=es2019 --outfile=dist/graphql.js",
+    "postbuild": "cd dist && zip -r graphql.zip graphql.js*"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.4.0",
+    "@graphql-tools/load": "^7.7.0",
+    "apollo-graphql": "^0.9.7",
+    "apollo-server": "^3.9.0",
+    "apollo-server-lambda": "^3.9.0",
+    "dotenv": "^16.0.1",
+    "esbuild": "^0.14.48",
+    "graphql": "^16.5.0",
+    "pg": "^8.7.3",
+    "pg-native": "^3.0.0",
+    "ts-node": "^10.8.2"
+  }
+}
