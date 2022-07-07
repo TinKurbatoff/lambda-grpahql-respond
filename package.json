@@ -9,7 +9,7 @@
     "start": "ts-node ./src/graphql.ts",
     "prebuild": "rm -rf dist",
     "build": "esbuild ./src/graphql.ts --bundle --minify --sourcemap --platform=node --target=es2019 --outfile=dist/graphql.js",
-    "postbuild": "cd dist && zip -r graphql.zip graphql.js*"
+    "postbuild": "cp dist/graphql.js src/ && cd dist && zip -r graphql.zip graphql.js* ../src/types/schema.graphql"
   },
   "engines": {
     "node": ">=14.15.0"

@@ -7,5 +7,5 @@
   "requestContext": {},
   "xbody": "{\"operationName\": null, \"variables\": null, \"query\": \"{ addrListItems(primary_lane: null, state: null) {status message data {city} } }\"}",
   "bodyn": "{\"query\":\"query ($address: String, $city: String) {  addrListItems (primary_lane: $address, city: $city) {\n    status\n    message\n    itemsCount\n    data {\n      primary_lane\n      city\n      state\n      latitude\n      longitude\n    }\n  }\n}\n\",\"variables\":{\"city\":\"OAKLAND\",\"address\":\"333 WAYNE AVE APT E\"}}",
-  "body": "{\"query\":\"query ($address: String, $city: String) {  addrListItems (primary_lane: $address, city: $city) {    status    message    itemsCount    data {      primary_lane      city      state      latitude      longitude    }  }}\",\"variables\":{\"city\":\"OAKLAND\",\"address\":\"333 WAYNE AVE APT E\"}}"
+  "body": "{\"query\":\"query ($address: String, $city: String) {  addrListItems (primary_lane: $address, city: $city) {    status    message    itemsCount    data {      formatted_street_address      city      state      latitude      longitude    }  }}\",\"variables\":{\"city\":\"OAKLAND\",\"address\":\"333 WAYNE AVE APT E\"}}"
 }
